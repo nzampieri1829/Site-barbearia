@@ -1,0 +1,2110 @@
+/*==================================================
+=
+= BARBER PRIME
+= CSS - PARTE 1
+= Reset + Variáveis + Global + Header + Hero + Sobre
+=
+==================================================*/
+
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111111;
+    color:#ffffff;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+    padding:110px 0;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+
+/*=========================
+VARIÁVEIS
+=========================*/
+
+:root{
+
+    --laranja:#F57C00;
+    --vermelho:#C62828;
+    --preto:#111111;
+    --cinza:#1C1C1C;
+    --cinza2:#2B2B2B;
+    --branco:#FFFFFF;
+
+    --sombra:0 15px 35px rgba(0,0,0,.25);
+
+    --radius:18px;
+
+    --transition:.35s;
+
+}
+
+
+/*=========================
+TÍTULOS
+=========================*/
+
+.section-mini{
+
+    color:var(--laranja);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+.section-title{
+
+    font-family:'Bebas Neue',cursive;
+
+    font-size:3rem;
+
+    letter-spacing:2px;
+
+    margin:15px 0 25px;
+
+    color:#fff;
+
+}
+
+.section-description{
+
+    color:#cfcfcf;
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+
+/*=========================
+BOTÕES
+=========================*/
+
+.btn-primary{
+
+    background:linear-gradient(135deg,var(--laranja),var(--vermelho));
+
+    color:#fff;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    display:inline-flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--sombra);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-6px);
+
+    opacity:.92;
+
+}
+
+.btn-secondary{
+
+    border:2px solid var(--laranja);
+
+    color:#fff;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    display:inline-block;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--laranja);
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+.btn-card{
+
+    margin-top:18px;
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+    background:var(--laranja);
+
+    color:#fff;
+
+    border-radius:40px;
+
+    transition:var(--transition);
+
+}
+
+.btn-card:hover{
+
+    background:var(--vermelho);
+
+}
+
+
+/*=========================
+HEADER
+=========================*/
+
+.header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    background:rgba(17,17,17,.95);
+
+    backdrop-filter:blur(8px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:90px;
+
+}
+
+.logo{
+
+    color:#fff;
+
+    font-size:2rem;
+
+    font-family:'Bebas Neue';
+
+    letter-spacing:2px;
+
+}
+
+.logo span{
+
+    color:var(--laranja);
+
+}
+
+.logo i{
+
+    color:var(--laranja);
+
+    margin-right:10px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.menu a{
+
+    color:#fff;
+
+    transition:var(--transition);
+
+    font-weight:500;
+
+}
+
+.menu a:hover{
+
+    color:var(--laranja);
+
+}
+
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#111111,#1d1d1d,#2B2B2B);
+
+    padding-top:120px;
+
+}
+
+.hero-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.hero-mini{
+
+    color:var(--laranja);
+
+    text-transform:uppercase;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+.hero h1{
+
+    font-family:'Bebas Neue';
+
+    font-size:5.3rem;
+
+    line-height:1;
+
+    margin:20px 0;
+
+}
+
+.hero h1 span{
+
+    color:var(--laranja);
+
+}
+
+.hero p{
+
+    color:#dddddd;
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image img{
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+    transition:.5s;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.hero-info{
+
+    display:flex;
+
+    gap:50px;
+
+    margin-top:55px;
+
+}
+
+.hero-info h3{
+
+    color:var(--laranja);
+
+    font-size:2rem;
+
+}
+
+.hero-info p{
+
+    margin-top:5px;
+
+    color:#bdbdbd;
+
+    font-size:.95rem;
+
+}
+
+
+/*=========================
+SOBRE
+=========================*/
+
+.sobre{
+
+    background:#171717;
+
+}
+
+.sobre-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.sobre-image img{
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.sobre-text p{
+
+    color:#d8d8d8;
+
+    margin-bottom:20px;
+
+}
+
+.sobre-cards{
+
+    display:grid;
+
+    gap:20px;
+
+    margin:35px 0;
+
+}
+
+.sobre-card{
+
+    display:flex;
+
+    gap:18px;
+
+    background:#222;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    transition:var(--transition);
+
+}
+
+.sobre-card:hover{
+
+    transform:translateY(-8px);
+
+    background:#292929;
+
+}
+
+.sobre-card i{
+
+    font-size:28px;
+
+    color:var(--laranja);
+
+    min-width:45px;
+
+}
+
+.sobre-card h3{
+
+    margin-bottom:8px;
+
+}
+
+.sobre-lista{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.sobre-lista div{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    color:#e4e4e4;
+
+}
+
+.sobre-lista i{
+
+    color:var(--laranja);
+
+}
+
+/*==================================================
+=
+= BARBER PRIME
+= CSS - PARTE 2
+= Diferenciais + Serviços + Galeria
+=
+==================================================*/
+
+
+/*=========================
+DIFERENCIAIS
+=========================*/
+
+.diferenciais{
+    background:#111111;
+    text-align:center;
+}
+
+.diferenciais-grid{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.card-diferencial{
+
+    background:#1c1c1c;
+
+    padding:40px 28px;
+
+    border-radius:20px;
+
+    transition:.35s;
+
+    box-shadow:var(--sombra);
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.card-diferencial:hover{
+
+    transform:translateY(-10px);
+
+    background:#252525;
+
+    border-color:var(--laranja);
+
+}
+
+.card-diferencial i{
+
+    font-size:45px;
+
+    color:var(--laranja);
+
+    margin-bottom:25px;
+
+}
+
+.card-diferencial h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:15px;
+
+}
+
+.card-diferencial p{
+
+    color:#d2d2d2;
+
+    font-size:.95rem;
+
+}
+
+
+/*=========================
+SERVIÇOS
+=========================*/
+
+.servicos{
+
+    background:#181818;
+
+}
+
+.servicos .section-title,
+.servicos .section-mini{
+
+    text-align:center;
+    display:block;
+
+}
+
+.servicos-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.servico-card{
+
+    background:#222;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:var(--sombra);
+
+}
+
+.servico-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.servico-card img{
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.servico-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.servico-info{
+
+    padding:28px;
+
+}
+
+.servico-info h3{
+
+    margin-bottom:12px;
+
+    font-size:1.35rem;
+
+}
+
+.servico-info p{
+
+    color:#cfcfcf;
+
+    margin-bottom:22px;
+
+    min-height:80px;
+
+}
+
+.preco{
+
+    display:inline-block;
+
+    background:linear-gradient(135deg,var(--laranja),var(--vermelho));
+
+    color:#fff;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+}
+
+.btn-card{
+
+    margin-top:22px;
+
+}
+
+
+/*=========================
+GALERIA
+=========================*/
+
+.galeria{
+
+    background:#111111;
+
+    text-align:center;
+
+}
+
+.galeria-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+.galeria-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    box-shadow:var(--sombra);
+
+}
+
+.galeria-item img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.galeria-item:hover img{
+
+    transform:scale(1.12);
+
+    filter:brightness(.45);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.4s;
+
+    background:rgba(0,0,0,.20);
+
+}
+
+.galeria-item:hover .overlay{
+
+    opacity:1;
+
+}
+
+.overlay h3{
+
+    color:#fff;
+
+    font-size:1.6rem;
+
+    font-family:'Bebas Neue',cursive;
+
+    letter-spacing:2px;
+
+    padding:12px 26px;
+
+    border:2px solid var(--laranja);
+
+    border-radius:50px;
+
+    background:rgba(245,124,0,.15);
+
+}
+
+
+/*=========================
+EFEITOS GERAIS
+=========================*/
+
+.servico-card,
+.card-diferencial,
+.galeria-item{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.servico-card:hover,
+.card-diferencial:hover,
+.galeria-item:hover{
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.45);
+
+}
+
+
+/*==================================================
+=
+= BARBER PRIME
+= CSS - PARTE 3
+= Estatísticas + Depoimentos + Equipe + Horários
+=
+==================================================*/
+
+
+/*=========================
+ESTATÍSTICAS
+=========================*/
+
+.estatisticas{
+
+    background:linear-gradient(135deg,var(--laranja),var(--vermelho));
+
+    color:#fff;
+
+}
+
+.estatisticas-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:25px;
+
+}
+
+.numero-card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.numero-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.numero-card h2{
+
+    font-family:'Bebas Neue',cursive;
+
+    font-size:3.5rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+.numero-card p{
+
+    font-size:1rem;
+
+    font-weight:500;
+
+}
+
+
+/*=========================
+DEPOIMENTOS
+=========================*/
+
+.depoimentos{
+
+    background:#181818;
+
+    text-align:center;
+
+}
+
+.depoimentos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.depoimento-card{
+
+    background:#222;
+
+    padding:35px 30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transition);
+
+}
+
+.depoimento-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.depoimento-card img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    border:5px solid var(--laranja);
+
+    margin-bottom:25px;
+
+}
+
+.depoimento-card h3{
+
+    margin-bottom:10px;
+
+    font-size:1.3rem;
+
+}
+
+.estrelas{
+
+    color:#FFD54F;
+
+    font-size:1.3rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+.depoimento-card p{
+
+    color:#d5d5d5;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================
+EQUIPE
+=========================*/
+
+.equipe{
+
+    background:#111111;
+
+    text-align:center;
+
+}
+
+.equipe-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.equipe-card{
+
+    background:#1f1f1f;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transition);
+
+}
+
+.equipe-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.equipe-card img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.equipe-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.equipe-card h3{
+
+    margin-top:25px;
+
+    font-size:1.4rem;
+
+}
+
+.equipe-card span{
+
+    display:block;
+
+    color:var(--laranja);
+
+    font-weight:600;
+
+    margin:12px 0 18px;
+
+}
+
+.equipe-card p{
+
+    color:#d4d4d4;
+
+    padding:0 25px 30px;
+
+}
+
+
+/*=========================
+HORÁRIOS
+=========================*/
+
+.horarios{
+
+    background:#181818;
+
+    text-align:center;
+
+}
+
+.tabela-horarios{
+
+    max-width:700px;
+
+    margin:60px auto 0;
+
+    background:#222;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+}
+
+.tabela-horarios div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 30px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.tabela-horarios div:last-child{
+
+    border-bottom:none;
+
+}
+
+.tabela-horarios div:hover{
+
+    background:#2d2d2d;
+
+}
+
+.tabela-horarios strong{
+
+    font-size:1.05rem;
+
+}
+
+.tabela-horarios span{
+
+    color:var(--laranja);
+
+    font-weight:700;
+
+}
+
+
+/*=========================
+ANIMAÇÕES SUAVES
+=========================*/
+
+.numero-card,
+.depoimento-card,
+.equipe-card,
+.tabela-horarios div{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+
+}
+
+.numero-card:hover,
+.depoimento-card:hover,
+.equipe-card:hover{
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.45);
+
+}
+
+
+/*==================================================
+=
+= BARBER PRIME
+= CSS - PARTE 3
+= Estatísticas + Depoimentos + Equipe + Horários
+=
+==================================================*/
+
+
+/*=========================
+ESTATÍSTICAS
+=========================*/
+
+.estatisticas{
+
+    background:linear-gradient(135deg,var(--laranja),var(--vermelho));
+
+    color:#fff;
+
+}
+
+.estatisticas-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:25px;
+
+}
+
+.numero-card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.numero-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.numero-card h2{
+
+    font-family:'Bebas Neue',cursive;
+
+    font-size:3.5rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+.numero-card p{
+
+    font-size:1rem;
+
+    font-weight:500;
+
+}
+
+
+/*=========================
+DEPOIMENTOS
+=========================*/
+
+.depoimentos{
+
+    background:#181818;
+
+    text-align:center;
+
+}
+
+.depoimentos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.depoimento-card{
+
+    background:#222;
+
+    padding:35px 30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transition);
+
+}
+
+.depoimento-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.depoimento-card img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    border:5px solid var(--laranja);
+
+    margin-bottom:25px;
+
+}
+
+.depoimento-card h3{
+
+    margin-bottom:10px;
+
+    font-size:1.3rem;
+
+}
+
+.estrelas{
+
+    color:#FFD54F;
+
+    font-size:1.3rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+.depoimento-card p{
+
+    color:#d5d5d5;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================
+EQUIPE
+=========================*/
+
+.equipe{
+
+    background:#111111;
+
+    text-align:center;
+
+}
+
+.equipe-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.equipe-card{
+
+    background:#1f1f1f;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transition);
+
+}
+
+.equipe-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.equipe-card img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.equipe-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.equipe-card h3{
+
+    margin-top:25px;
+
+    font-size:1.4rem;
+
+}
+
+.equipe-card span{
+
+    display:block;
+
+    color:var(--laranja);
+
+    font-weight:600;
+
+    margin:12px 0 18px;
+
+}
+
+.equipe-card p{
+
+    color:#d4d4d4;
+
+    padding:0 25px 30px;
+
+}
+
+
+/*=========================
+HORÁRIOS
+=========================*/
+
+.horarios{
+
+    background:#181818;
+
+    text-align:center;
+
+}
+
+.tabela-horarios{
+
+    max-width:700px;
+
+    margin:60px auto 0;
+
+    background:#222;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+}
+
+.tabela-horarios div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 30px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.tabela-horarios div:last-child{
+
+    border-bottom:none;
+
+}
+
+.tabela-horarios div:hover{
+
+    background:#2d2d2d;
+
+}
+
+.tabela-horarios strong{
+
+    font-size:1.05rem;
+
+}
+
+.tabela-horarios span{
+
+    color:var(--laranja);
+
+    font-weight:700;
+
+}
+
+
+/*=========================
+ANIMAÇÕES SUAVES
+=========================*/
+
+.numero-card,
+.depoimento-card,
+.equipe-card,
+.tabela-horarios div{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+
+}
+
+.numero-card:hover,
+.depoimento-card:hover,
+.equipe-card:hover{
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.45);
+
+}
+
+
+/*==========================================
+O CSS CONTINUA NA PARTE 4
+
+• Localização
+• CTA
+• Rodapé
+• Responsividade completa
+• Media Queries
+• Ajustes finais
+==========================================*/
+
+/*==================================================
+=
+= BARBER PRIME
+= CSS - PARTE 4
+= Localização + CTA + Rodapé + Responsividade
+=
+==================================================*/
+
+
+/*=========================
+LOCALIZAÇÃO
+=========================*/
+
+.localizacao{
+    background:#111111;
+}
+
+.localizacao-container{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:50px;
+    align-items:center;
+}
+
+.info-local h2{
+    margin-bottom:20px;
+}
+
+.contato-item{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    margin:22px 0;
+    font-size:1.05rem;
+    color:#dddddd;
+}
+
+.contato-item i{
+    color:var(--laranja);
+    font-size:22px;
+    min-width:25px;
+    margin-top:3px;
+}
+
+.mapa{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:var(--sombra);
+}
+
+.mapa iframe{
+    width:100%;
+    height:500px;
+    border:none;
+}
+
+
+/*=========================
+CTA FINAL
+=========================*/
+
+.cta{
+
+    background:linear-gradient(135deg,var(--laranja),var(--vermelho));
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.cta h2{
+
+    font-family:'Bebas Neue',cursive;
+
+    font-size:4rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    max-width:700px;
+
+    margin:auto auto 35px;
+
+    font-size:1.1rem;
+
+}
+
+.cta .btn-primary{
+
+    background:#111111;
+
+}
+
+.cta .btn-primary:hover{
+
+    background:#000;
+
+}
+
+
+/*=========================
+RODAPÉ
+=========================*/
+
+.footer{
+
+    background:#0b0b0b;
+
+    padding:80px 0 0;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.3fr;
+
+    gap:45px;
+
+}
+
+.footer h3{
+
+    margin-bottom:20px;
+
+    color:var(--laranja);
+
+}
+
+.footer p,
+.footer li{
+
+    color:#cfcfcf;
+
+    margin-bottom:12px;
+
+}
+
+.footer ul li{
+
+    transition:.3s;
+
+}
+
+.footer ul li:hover{
+
+    color:var(--laranja);
+
+    padding-left:6px;
+
+}
+
+.footer a{
+
+    color:#d9d9d9;
+
+}
+
+.footer a:hover{
+
+    color:var(--laranja);
+
+}
+
+.copyright{
+
+    margin-top:60px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#bdbdbd;
+
+}
+
+
+/*=========================
+ANIMAÇÕES GERAIS
+=========================*/
+
+section{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+img{
+
+    transition:.45s;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/*=========================
+RESPONSIVO
+1400px
+=========================*/
+
+@media(max-width:1400px){
+
+.container{
+
+    width:92%;
+
+}
+
+.hero h1{
+
+    font-size:4.8rem;
+
+}
+
+}
+
+
+/*=========================
+1200px
+=========================*/
+
+@media(max-width:1200px){
+
+.hero-container,
+.sobre-container,
+.localizacao-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero{
+
+    text-align:center;
+
+}
+
+.hero-buttons,
+.hero-info{
+
+    justify-content:center;
+
+}
+
+.hero-image{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.servicos-grid,
+.diferenciais-grid,
+.galeria-grid,
+.equipe-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.estatisticas-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*=========================
+992px
+=========================*/
+
+@media(max-width:992px){
+
+.header .container{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:20px 0;
+
+}
+
+.menu{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+    gap:18px;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+}
+
+.section-title{
+
+    font-size:2.5rem;
+
+}
+
+.hero-info{
+
+    flex-wrap:wrap;
+
+}
+
+.estatisticas-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*=========================
+768px
+=========================*/
+
+@media(max-width:768px){
+
+section{
+
+    padding:80px 0;
+
+}
+
+.hero h1{
+
+    font-size:3.2rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    width:100%;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.servicos-grid,
+.diferenciais-grid,
+.galeria-grid,
+.equipe-grid,
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.sobre-lista{
+
+    grid-template-columns:1fr;
+
+}
+
+.tabela-horarios div{
+
+    padding:18px;
+
+}
+
+.cta h2{
+
+    font-size:3rem;
+
+}
+
+}
+
+
+/*=========================
+576px
+=========================*/
+
+@media(max-width:576px){
+
+.container{
+
+    width:94%;
+
+}
+
+.logo{
+
+    font-size:1.7rem;
+
+}
+
+.hero{
+
+    padding-top:170px;
+
+}
+
+.hero h1{
+
+    font-size:2.6rem;
+
+}
+
+.section-title{
+
+    font-size:2rem;
+
+}
+
+.hero-info{
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.hero-info h3{
+
+    font-size:1.7rem;
+
+}
+
+.numero-card h2{
+
+    font-size:2.7rem;
+
+}
+
+.estatisticas-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.cta h2{
+
+    font-size:2.4rem;
+
+}
+
+.cta p{
+
+    font-size:1rem;
+
+}
+
+.footer-grid{
+
+    text-align:center;
+
+}
+
+.contato-item{
+
+    font-size:.95rem;
+
+}
+
+.mapa iframe{
+
+    height:350px;
+
+}
+
+}
